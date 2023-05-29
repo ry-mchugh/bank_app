@@ -78,14 +78,41 @@ public class Account {
                     break;
 
                 case 'B':
-                    System.out.println("Enter an amount to deposit: ");
+                    System.out.println("Enter amount to deposit: ");
                     int amount = scanner.nextInt();
                     deposit(amount);
                     System.out.println();
                     break;
 
+                case 'C':
+                    System.out.println("Enter amount to withdraw: ");
+                    int amount2 = scanner.nextInt();
+                    withdraw(amount2);
+                    System.out.println();
+                    break;
 
+                case 'D':
+                    System.out.println("++++++++++++++++++++++");
+                    getPrevTransaction();
+                    System.out.println("++++++++++++++++++++++");
+                    System.out.println();
+                    break;
+
+                case 'E':
+                    System.out.println("Enter years of accrued interest: ");
+                    int years = scanner.nextInt();
+                    calcInterest(years);
+                    break;
+
+                case 'F':
+                    System.out.println("++++++++++++++++++++++");
+                    break;
+
+                default:
+                    System.out.println("Error: invalid option. Enter A, B, C, D, E, F");
+                    break;
             }
-        }
+        } while(option != 'F');
+        System.out.println("Thank you for banking with us!");
     }
 }
