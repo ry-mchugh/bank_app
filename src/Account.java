@@ -28,7 +28,7 @@ public class Account {
         }
     }
 
-    // function to show the previous transation
+    // function to show the previous transaction
     void getPrevTransaction() {
         if (prevTransaction > 0) {
             System.out.println("Deposited: " + prevTransaction);
@@ -49,7 +49,7 @@ public class Account {
 
     void menu() {
         char option = '\0';
-        Scanner scanner = new Scanner(system.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome, " + customerName + ".");
         System.out.println("Your ID is: " + customerID);
         System.out.println();
