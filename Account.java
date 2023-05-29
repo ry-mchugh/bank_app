@@ -39,4 +39,13 @@ public class Account {
         }
     }
 
+    // function to calculate interest after x number of years
+    void calcInterest(int years) {
+        double interestRate = .0155;
+        double newBalance = (balance * interestRate * years) + balance;
+        System.out.println("Current interest rate is " + (100 * interestRate) + "%");
+        System.out.println("After " + years + " years, your balance will be: " + newBalance);
+    }
+
+
 }
