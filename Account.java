@@ -12,5 +12,21 @@ public class Account {
         customerID = cid;
     }
 
+    // function to deposit money
+    void deposit(int amount) {
+        if (amount != 0) {
+            balance = balance + amount;
+            prevTransaction = amount;
+        }
+    }
+
+    // function to withdraw money
+    void withdraw(int amount) {
+        if (amount != 0) {
+            balance = balance - amount;
+            prevTransaction = -amount;
+        }
+    }
+
 
 }
