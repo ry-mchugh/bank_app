@@ -70,44 +70,45 @@ public class Account {
             System.out.println();
 
             switch(option) {
+                // allow user to check their balance
                 case 'A':
                     System.out.println("++++++++++++++++++++++");
                     System.out.println("Balance = £" + balance);
                     System.out.println("++++++++++++++++++++++");
                     System.out.println();
                     break;
-
+                // allow user to deposit money
                 case 'B':
                     System.out.println("Enter amount to deposit: ");
                     int amount = scanner.nextInt();
                     deposit(amount);
                     System.out.println();
                     break;
-
+                // allow user to withdraw money
                 case 'C':
                     System.out.println("Enter amount to withdraw: ");
                     int amount2 = scanner.nextInt();
                     withdraw(amount2);
                     System.out.println();
                     break;
-
+                // allow user to view most recent transaction
                 case 'D':
                     System.out.println("++++++++++++++++++++++");
                     getPrevTransaction();
                     System.out.println("++++++++++++++++++++++");
                     System.out.println();
                     break;
-
+                // allow user to calculate interest
                 case 'E':
                     System.out.println("Enter years of accrued interest: ");
                     int years = scanner.nextInt();
                     calcInterest(years);
                     break;
-
+                // allow user to exit menu
                 case 'F':
                     System.out.println("++++++++++++++++++++++");
                     break;
-
+                // default case to check for invalid option
                 default:
                     System.out.println("Error: invalid option. Enter A, B, C, D, E, F");
                     break;
