@@ -28,5 +28,15 @@ public class Account {
         }
     }
 
+    // function to show the previous transation
+    void getPrevTransaction() {
+        if (prevTransaction > 0) {
+            System.out.println("Deposited: " + prevTransaction);
+        } else if (prevTransaction < 0) {
+            System.out.println("Withdraw: " + Math.abs(prevTransaction));
+        } else {
+            System.out.println("No transaction happened");
+        }
+    }
 
 }
